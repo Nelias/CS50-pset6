@@ -24,7 +24,7 @@ def main():
         
         if  y < 65 or 90 < y < 97 or 122 < y < 128: # this if statement provides that non-alphabetical characters are unchanged
             print(chr(y), sep=' ', end='')
-        elif 90 < int(y) + key % 26 < 97: # wrapping around upper case letters from Z to A
+        elif 90 < int(y) + key % 26: # wrapping around upper case letters from Z to A
             print(chr(int(z % 26) + 65), sep=' ', end='')
         elif 122 < int(y) + key % 26: # wrapping around lower case letters from z to a
             print(chr(int(a % 26) + 97), sep=' ', end='')
