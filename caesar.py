@@ -20,16 +20,16 @@ def main():
     
     for i in range(0, len(input_text)):
         
-        y = ord(input_text[i]) # declaration of a local variable consisting of the ASCII value of a letter
-        z = y - 65 + key # this variable stores the ASCII number converted to upper case alphabetical index number plus the argv value
-        a = y - 97 + key # this variable stores the ASCII number converted to lower case alphabetical index number plus the argv value
+        ascii_input_letter = ord(input_text[i]) # declaration of a local variable consisting of the ASCII value of a letter
+        modified_upper_ascii_letter = ascii_input_letter - 65 + key # this variable stores the ASCII number converted to upper case alphabetical index number plus the argv value
+        modified_lower_ascii_letter = ascii_input_letter - 97 + key # this variable stores the ASCII number converted to lower case alphabetical index number plus the argv value
         
-        if  y < 65 or 90 < y < 97 or 122 < y < 128: # this if statement provides that non-alphabetical characters are unchanged
-            print(chr(y), sep=' ', end='')
-        elif 64 < int(y) < 91: # wrapping around upper case letters from Z to A
-            print(chr(int(z % 26) + 65), sep=' ', end='')
-        elif 96 < int(y) < 123: # wrapping around lower case letters from z to a
-            print(chr(int(a % 26) + 97), sep=' ', end='')
+        if  ascii_input_letter < 65 or 90 < ascii_input_letter < 97 or 122 < ascii_input_letter < 128: # this if statement provides that non-alphabetical characters are unchanged
+            print(chr(ascii_input_letter), sep=' ', end='')
+        elif 64 < int(ascii_input_letter) < 91: # wrapping around upper case letters from Z to A
+            print(chr(int(modified_upper_ascii_letter % 26) + 65), sep=' ', end='')
+        elif 96 < int(ascii_input_letter) < 123: # wrapping around lower case letters from z to a
+            print(chr(int(modified_lower_ascii_letter % 26) + 97), sep=' ', end='')
             
     print()
     return(0)
