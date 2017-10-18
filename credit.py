@@ -4,11 +4,9 @@ y = str(x) # variable with a card number as a string to use it later for validat
 def main():
     if luhn_checksum(x) != 0 and numLen(x) < 13 or x <= 0 or numLen(x) >= 17:
        print("INVALID")
-    elif numLen(x) == 16 and y[0] == str(5):
-        if y[1] == str(1) or str(2) or str(3) or str(4) or str(5):
+    elif numLen(x) == 16 and y[0] == str(5) and (y[1] == str(1) or str(2) or str(3) or str(4) or str(5)):
             print("MASTERCARD")
-    elif numLen(x) == 15 and y[0] == str(3):
-        if y[1] == str(7) or y[1] == str(4):
+    elif numLen(x) == 15 and y[0] == str(3) and (y[1] == str(7) or y[1] == str(4)):
             print("AMEX")
     elif numLen(x) >= 13 and numLen(x) <= 16 and y[0] == str(4):
         print("VISA")
