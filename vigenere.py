@@ -35,7 +35,7 @@ def main():
         
         modified_key = ord(key.lower()[int(j) - int(counter)]) - 97
      
-        modified_upper_ascii_letter = ascii_input_letter - 65 + modified_key # equals 1 # this variable stores the ASCII number converted to upper case alphabetical index number plus the argv value
+        modified_upper_ascii_letter = ascii_input_letter - 65 + modified_key # this variable stores the ASCII number converted to upper case alphabetical index number plus the argv value
             
         modified_lower_ascii_letter = ascii_input_letter - 97 + modified_key # this variable stores the ASCII number converted to lower case alphabetical index number plus the argv value
         
